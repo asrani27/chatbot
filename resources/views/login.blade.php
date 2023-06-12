@@ -39,7 +39,7 @@
     
   </header>
   <!-- Full Width Column -->
-  <div class="content-wrapper"  style="background-image: url('/logo/bg4.png'); background-size:cover">
+  <div class="content-wrapper"  style="background-image: url('/logo/bg3.png'); background-size:cover">
     <div class="containe">
       <!-- Content Header (Page header) -->
       <section class="content-header">
@@ -54,13 +54,53 @@
         </ol> --}}
         <div class="text-right">
 
-          <strong><a href="/login" class="btn btn-primary btn-flat"><i class="fa fa-key"></i> Login</a></strong>
+          <strong><a href="/" class="btn btn-danger btn-flat"><i class="fa fa-arrow-left"></i> Ke Home</a></strong>
         </div>
       </section>
 
       <!-- Main content -->
       <section class="content">
-        
+        <div class="row">
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <div class="text-center">
+              <br/><br/>
+              <img src="/logo/bot.png" width="100%">
+            </div>
+          <br/><br/>
+            <div class="box box-primary">
+              <div class="box-header with-border text-center">
+                <h3 class="box-title">CHATBOT ADMIN </h3>
+      
+              </div>
+              <form class="form-horizontal" method="post" action="/login">
+                @csrf
+              <div class="box-body">
+                <div class="form-group">
+                  <label for="inputEmail3" class="col-sm-3 control-label">Username</label>
+
+                  <div class="col-sm-9">
+                    <input type="username" class="form-control" placeholder="username" name="username" value="{{old('username')}}" autocomplete="new-password" />
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="inputPassword3" class="col-sm-3 control-label">Password</label>
+
+                  <div class="col-sm-9">
+                    <input type="password" class="form-control" placeholder="Password" name="password" value="{{old('password')}}" autocomplete="new-password" />
+                  </div>
+                </div>
+              </div>
+              <div class="box-footer social-auth-links">
+                <button type="submit" class="btn btn-primary btn-flat btn-block"><i class="fa fa-sign-out"></i> Masuk</button>
+              </div>
+              </form>
+            </div>
+          </div>
+          <div class="col-md-4">
+          </div>
+        </div>
         
       </section>
       <!-- /.content -->
@@ -105,7 +145,7 @@ title : 'ASISTEN DIGITAL STMIK IB'
 introMessage: "✋ Hi! I'm form eimpact.net"
 };
 </script> --}}
-<script>
+{{-- <script>
   var botmanWidget = {
 title: 'ASISTEN DIGITAL STMIK IB',
 introMessage: 'Hai, Saya adalah Asisten Digital STMIK Indonesia Banjarmasin, Silahkan ketik Hi atau Halo untuk memulai percakapan',
@@ -113,5 +153,5 @@ headerTextColor : '#fff'
 
 };
 </script>
-<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/botman-web-widget@0/build/js/widget.js'></script> --}}
 </html>
